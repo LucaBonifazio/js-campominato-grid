@@ -26,14 +26,14 @@ eleBtn.addEventListener('click', function () {
     if (mode === 'normal') {
         for (let i = 1; i <= 81; i++) {
             const eleCell = document.createElement('div');
-            eleCell.classList.add('normal');
+            eleCell.classList.add('cell');
             eleGrid.append(eleCell);
             eleCell.append(`${i}`);
         }
     } else if (mode === 'hard') {
         for (let i = 1; i <= 49; i++) {
             const eleCell = document.createElement('div');
-            eleCell.classList.add('hard');
+            eleCell.classList.add('cell');
             eleGrid.append(eleCell);
             eleCell.append(`${i}`);
         }

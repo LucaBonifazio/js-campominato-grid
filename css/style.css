@@ -37,6 +37,11 @@ body{
     font-size: 16px;
 }
 
+.btn:hover{
+    background-color: #006695;
+   transform: scale(1.2);
+}
+
 .container {
     height: calc(100vh - 140px);
     padding: 3rem;
@@ -67,9 +72,18 @@ body{
 	background-color: rgb(46, 247, 6);
 }
 
+label{
+    font-size: large;
+    padding: .5rem;
+}
+
 #mode{
     padding: .5rem;
     margin-right: 2rem;
+}
+
+select option:hover{
+   background-color: #a2e2ff;
 }
 
 footer{
