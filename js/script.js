@@ -20,13 +20,15 @@ for (let i = 1; i <= 100; i++) {
 }
 
 eleBtn.addEventListener('click', function () {
-
+    eleGrid.replaceChildren();
     const mode = eleMode.value;
 
     if (mode === 'normal') {
         for (let i = 1; i <= 81; i++) {
             const eleCell = document.createElement('div');
             eleCell.classList.add('cell');
+            eleCell.style.width = 'calc(100% / 9)';
+            eleCell.style.height = 'calc(100% / 9)';
             eleGrid.append(eleCell);
             eleCell.append(`${i}`);
         }
@@ -34,13 +36,13 @@ eleBtn.addEventListener('click', function () {
         for (let i = 1; i <= 49; i++) {
             const eleCell = document.createElement('div');
             eleCell.classList.add('cell');
+            eleCell.style.width = 'calc(100% / 7)';
+            eleCell.style.height = 'calc(100% / 7)';
             eleGrid.append(eleCell);
             eleCell.append(`${i}`);
         }
-    }
+    } 
 });
-
-
 
 
 
