@@ -5,18 +5,43 @@
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
 const eleGrid = document.querySelector('.grid');
+const eleMode = document.querySelector('#mode')
+const eleBtn = document.querySelector('.btn');
 
 for (let i = 1; i <= 100; i++) {
 	const eleCell = document.createElement('div');
 	eleCell.classList.add('cell');
 	eleGrid.append(eleCell);
     eleCell.append(`${i}`);
-    
 
 	eleCell.addEventListener('click', function () {
 		this.classList.toggle('active')
 	});
 }
+
+eleBtn.addEventListener('click', function () {
+
+    const mode = eleMode.value;
+
+    if (mode === 'normal') {
+        for (let i = 1; i <= 81; i++) {
+            const eleCell = document.createElement('div');
+            eleCell.classList.add('normal');
+            eleGrid.append(eleCell);
+            eleCell.append(`${i}`);
+        }
+    } else if (mode === 'hard') {
+        for (let i = 1; i <= 49; i++) {
+            const eleCell = document.createElement('div');
+            eleCell.classList.add('hard');
+            eleGrid.append(eleCell);
+            eleCell.append(`${i}`);
+        }
+    }
+});
+
+
+
 
 
 
